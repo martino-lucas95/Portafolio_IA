@@ -1,0 +1,1 @@
+web: gunicorn ml_portfolio.wsgi
