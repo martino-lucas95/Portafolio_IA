@@ -1,36 +1,133 @@
 /* static/portfolio/global.css */
+
+/* Tipografía */
 body {
-    background-color: #E1D7C6;
+    background-color: #ffffff;
     color: #295F98;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
+  /* Encabezados */
   h1, h2, h3, p {
     color: #295F98;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
   }
   
+  /* Botones */
+.btn-primary {
+  background-color: #295F98;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1e456f;
+}
+
+/* Enlaces */
+a {
+  color: #295F98;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e456f;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #295F98;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+main {
+  flex: 1;
+  margin-bottom: 80px; /* Espacio extra para que no quede cubierto por el footer */
+}
+
   .navbar {
     background-color: #295F98 !important;
   }
   
+  .navbar-nav .nav-item {
+    margin-left: 15px; /* Añadir espacio entre los elementos */
+  }
+  
+  .navbar-brand {
+    margin-right: 20px; /* Separar el logo de los items */
+  }
+  
+
   .navbar-brand, .nav-link {
     color: #E1D7C6 !important;
     font-weight: bold;
   }
-  
+ 
+/* Pie de página */
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px 0;
+  position: relative; /* Cambiado de fixed a relative */
+  width: 100%;
+  text-align: center;
+  margin-top: auto; /* Para que el footer quede al final */
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.description {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #295F98;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
   .footer {
-    background-color: #295F98;
-    color: #E1D7C6;
+    position: static;
   }
+}
   
-  .footer a {
-    color: #E1D7C6;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
-  
+  .profile-image {
+    width: 10vw;
+    height: auto;  /* Mantendrá la proporción de la imagen */
+    border-radius: 50%; /* Mantiene la forma circular */
+}
