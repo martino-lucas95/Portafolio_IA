@@ -1,0 +1,53 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Sobre mí{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'portfolio/profile-circle.png' %}" alt="Mi foto" class="profile-image mb-3">
+        </div>
+        <div class="col-md-8">
+            <h2>Lucas Martino Kunsch</h2>
+            
+            <p>Soy Contador Público graduado en el año 2020, actualmente, curso el cuarto año de <strong>Ingeniería en Informática</strong> en la Universidad Católica del Uruguay</p>
+
+            <p>A lo largo de mi carrera, he desarrollado un perfil multidisciplinario, con una sólida trayectoria en contabilidad, administración e informática.
+
+            Trabajé en el área contable, administrativa y financiera de empresas de diferentes rubros, lo que me permitió adquirir experiencia en la gestión de recursos y proyectos... seguir</p>
+            
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>Resolución de problemas</li>
+                <li>Gestión de RRHH</li>
+                <li>Gestión de proyectos</li>
+                <li>Análisis de datos y creación de Dashboards</li>
+                <li>Automatización de procesos con SAP</li>
+                <li>Desarrollo de Software</li>
+
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3>Títulos y Certificaciones</h3>
+            <ul>
+                <li>Ingeniería en Informática - Universidad Católica del Uruguay (en curso)</li>
+                <li>Analista de Sistemas - Universidad Católica del Uruguay</li>
+                <li>Desarrollador de Software - Universidad Católica del Uruguay</li>
+                <li>Contador Público - Universidad de la República</li>
+                <li>Reto Informático UCU - Quality Assurance</li>
+                <li>Reto Informático UCU - Tech Lead</li>
+                <li>SAP Business One - Consultor Técnico & Funcional - Invenzis</li>
+                <li>Microsoft Power BI Desktop for Business Intelligence</li>
+                <li>Microsoft Excel Business Intelligence with Power Query & DAX</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

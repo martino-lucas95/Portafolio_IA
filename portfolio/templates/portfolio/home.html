@@ -1,0 +1,59 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<main class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <a href="{% url 'regression' %}">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h5 class="card-title">Regresión</h5>
+                        <p class="card-text">La regresión es un tipo de aprendizaje supervisado que predice un valor continuo basado en datos etiquetados.</p>
+                        <span class="badge bg-success mt-3">Supervised</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 mb-4">
+            <a href="{% url 'classification' %}">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-circle fa-3x mb-3"></i>
+                        <h5 class="card-title">Clasificación</h5>
+                        <p class="card-text">La clasificación es un tipo de aprendizaje supervisado que asigna etiquetas a datos en función de características observadas.</p>
+                        <span class="badge bg-success mt-3">Supervised</span> 
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <a href="{% url 'clustering' %}">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-layer-group fa-3x mb-3"></i>
+                        <h5 class="card-title">Clustering</h5>
+                        <p class="card-text">El clustering es un tipo de aprendizaje no supervisado que agrupa datos no etiquetados en grupos o clústeres basados en sus similitudes.</p>
+                        <span class="badge bg-warning text-dark mt-3">Unsupervised</span> 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 mb-4">
+            <a href="{% url 'dimensionality_reduction' %}">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-compress fa-3x mb-3"></i> 
+                        <h5 class="card-title">Reducción de Dimensionalidad</h5>
+                        <p class="card-text">Este tipo de algoritmo reduce el número de variables de un problema manteniendo las características más importantes, simplificando el análisis.</p>
+                        <span class="badge bg-warning text-dark mt-3">Unsupervised</span> 
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}

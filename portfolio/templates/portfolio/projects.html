@@ -1,0 +1,58 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Proyectos{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Proyectos de Machine Learning</h2>
+    <div class="row">
+        <!-- Proyecto 1 -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                {% comment %} <img src="{% static 'portfolio/clustering.jpg' %}" class="card-img-top" alt="Clustering Project"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">Clustering</h5>
+                    <p class="card-text">Un proyecto de agrupación de datos usando K-means para segmentar clientes.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                {% comment %} <img src="{% static 'portfolio/regression.jpg' %}" class="card-img-top" alt="Regression Project"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">Regresión</h5>
+                    <p class="card-text">Predicción de precios de viviendas utilizando regresión lineal.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                {% comment %} <img src="{% static 'portfolio/classification.jpg' %}" class="card-img-top" alt="Classification Project"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">Clasificación</h5>
+                    <p class="card-text">Clasificación de imágenes usando redes neuronales.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                {% comment %} <img src="{% static 'portfolio/dimensionality_reduction.jpg' %}" class="card-img-top" alt="Dimensionality Reduction"> {% endcomment %}
+                <div class="card-body">
+                    <h5 class="card-title">Reducción de Dimensionalidad</h5>
+                    <p class="card-text">Reducir características para mejorar modelos predictivos.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

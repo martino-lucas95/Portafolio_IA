@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+
+    {% load static %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/global.css' %}">
+    <link rel="icon" href="{% static 'portfolio/favicon.ico' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'portfolio/profile-circle.png' %}" alt="My Photo" class="profile-image me-2" style="width: 50px; height: 50px;">
+                    Machine Learning - Lucas Martino Kunsch
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">
+                                <i class="fas fa-home me-1"></i>Home
+                            </a>
+                        </li>
+                        <!-- Projects -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'projects' %}">
+                                <i class="fas fa-project-diagram me-1"></i>Projects
+                            </a>
+                        </li>
+                        <!-- About me -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about_me' %}">
+                                <i class="fas fa-user me-1"></i>About me
+                            </a>
+                        </li>
+                        <!-- Contact -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">
+                                <i class="fas fa-envelope me-1"></i>Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer py-4 mt-5 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fab fa-whatsapp me-2"></i><a href="https://api.whatsapp.com/send?phone=59897539259" target="_blank" class="text-light">+598 97 539 259</a></li>
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:martino.lucas95@gmail.com" target="_blank" class="text-light">martino.lucas95@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin me-2"></i><a href="https://www.linkedin.com/in/lucas-martino-kunsch-030b3673/" target="_blank" class="text-light">Lucas Martino Kunsch</a></li>
+                        <li><i class="fab fa-github me-2"></i><a href="https://github.com/martino-lucas95" target="_blank" class="text-light">martino-lucas95</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Lucas Martino</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

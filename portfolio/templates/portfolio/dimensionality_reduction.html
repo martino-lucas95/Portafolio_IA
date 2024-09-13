@@ -1,0 +1,87 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Reducción de Dimensionalidad{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Subtipos de Reducción de Dimensionalidad</h1>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PCA (Principal Component Analysis)</h5>
+                    <p class="card-text">
+                        PCA es una técnica que transforma los datos en nuevas variables (componentes principales), que capturan la mayor varianza posible en menos dimensiones.
+                    </p>
+                    <h6>¿Cuándo usarlo?</h6>
+                    <p>Es útil cuando los datos tienen muchas características correlacionadas. PCA es común en visualización de datos y preprocesamiento para modelos supervisados y no supervisados.</p>
+                    <h6>¿Qué necesita?</h6>
+                    <p>Es necesario que los datos estén escalados (normalizados o estandarizados), ya que PCA es sensible a las magnitudes de las características.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">LDA (Linear Discriminant Analysis)</h5>
+                    <p class="card-text">
+                        LDA busca maximizar la separación entre clases mientras reduce las dimensiones. Es un método supervisado que proyecta los datos en una nueva base que separa mejor las clases.
+                    </p>
+                    <h6>¿Cuándo usarlo?</h6>
+                    <p>LDA es ideal cuando se tiene un problema de clasificación y se necesita reducir las dimensiones mientras se mantiene la capacidad de separar las clases.</p>
+                    <h6>¿Qué necesita?</h6>
+                    <p>Necesita que los datos estén etiquetados (supervisado) y que estén escalados. Es útil cuando hay múltiples clases en los datos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">t-SNE (t-Distributed Stochastic Neighbor Embedding)</h5>
+                    <p class="card-text">
+                        t-SNE es una técnica que reduce las dimensiones manteniendo la proximidad local entre los puntos de datos. Es muy utilizada en la visualización de datos en 2D o 3D.
+                    </p>
+                    <h6>¿Cuándo usarlo?</h6>
+                    <p>Es ideal para visualización cuando se tiene un dataset complejo con alta dimensionalidad y se desea observar relaciones locales entre puntos.</p>
+                    <h6>¿Qué necesita?</h6>
+                    <p>t-SNE no requiere datos escalados, pero es computacionalmente costoso y sensible a parámetros como `perplexity`.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Autoencoders</h5>
+                    <p class="card-text">
+                        Los autoencoders son redes neuronales diseñadas para aprender una representación comprimida de los datos. Utilizan una arquitectura de codificación-decodificación para reducir las dimensiones.
+                    </p>
+                    <h6>¿Cuándo usarlo?</h6>
+                    <p>Es útil cuando se trabaja con datos complejos o no lineales y se desea capturar una representación más abstracta de los mismos. Se aplica en la compresión de imágenes, detección de anomalías, etc.</p>
+                    <h6>¿Qué necesita?</h6>
+                    <p>Requiere datos normalizados y, como es una red neuronal, una cantidad considerable de datos para su entrenamiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="description mt-5">
+        <h3>¿Cuándo aplicar Reducción de Dimensionalidad?</h3>
+        <p>
+            Se aplica cuando los datos tienen demasiadas características y se quiere reducir la complejidad sin perder mucha información. Es útil en preprocesamiento para mejorar el rendimiento de los modelos de Machine Learning.
+        </p>
+        <h4>¿Qué precondiciones se deben cumplir?</h4>
+        <ul>
+            <li><strong>Escalado de datos:</strong> Es crucial para técnicas como PCA y LDA, que son sensibles a las magnitudes de las características.</li>
+            <li><strong>Relaciones entre características:</strong> Técnicas como PCA funcionan mejor cuando las características están correlacionadas. Si no lo están, es posible que no se obtenga una gran reducción de dimensionalidad.</li>
+            <li><strong>Visualización:</strong> Para métodos como t-SNE, la reducción de dimensionalidad es principalmente para propósitos de visualización.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

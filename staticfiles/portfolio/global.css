@@ -1,0 +1,36 @@
+/* static/portfolio/global.css */
+body {
+    background-color: #E1D7C6;
+    color: #295F98;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1, h2, h3, p {
+    color: #295F98;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .navbar {
+    background-color: #295F98 !important;
+  }
+  
+  .navbar-brand, .nav-link {
+    color: #E1D7C6 !important;
+    font-weight: bold;
+  }
+  
+  .footer {
+    background-color: #295F98;
+    color: #E1D7C6;
+  }
+  
+  .footer a {
+    color: #E1D7C6;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+  
