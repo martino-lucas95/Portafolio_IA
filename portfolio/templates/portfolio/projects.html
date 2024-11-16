@@ -7,10 +7,14 @@
     <h2 class="text-center mb-4">Proyectos de Machine Learning</h2>
     <div class="row">
         <!-- Proyecto 1 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card mb-4">
-                {% comment %} <img src="{% static 'portfolio/clustering.jpg' %}" class="card-img-top" alt="Clustering Project"> {% endcomment %}
-                <div class="card-body">
+                <div class="card-img-top position-relative">
+                    <img src="{% static 'portfolio/clustering.jpg' %}" class="img-fluid" alt="Clustering Project">
+                    <span class="badge bg-secondary position-absolute top-0 start-0 m-2">Unsupervised</span>
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Clustering</span>
+                </div>
+                <div class="card-body text-center">
                     <h5 class="card-title">Clustering</h5>
                     <p class="card-text">Un proyecto de agrupación de datos usando K-means para segmentar clientes.</p>
                     <a href="#" class="btn btn-primary">Ver más</a>
@@ -19,10 +23,14 @@
         </div>
 
         <!-- Proyecto 2 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card mb-4">
-                {% comment %} <img src="{% static 'portfolio/regression.jpg' %}" class="card-img-top" alt="Regression Project"> {% endcomment %}
-                <div class="card-body">
+                <div class="card-img-top position-relative">
+                    <img src="{% static 'portfolio/regression.jpg' %}" class="img-fluid" alt="Regression Project">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Supervised</span>
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Regression</span>
+                </div>
+                <div class="card-body text-center">
                     <h5 class="card-title">Regresión</h5>
                     <p class="card-text">Predicción de precios de viviendas utilizando regresión lineal.</p>
                     <a href="#" class="btn btn-primary">Ver más</a>
@@ -31,10 +39,14 @@
         </div>
 
         <!-- Proyecto 3 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card mb-4">
-                {% comment %} <img src="{% static 'portfolio/classification.jpg' %}" class="card-img-top" alt="Classification Project"> {% endcomment %}
-                <div class="card-body">
+                <div class="card-img-top position-relative">
+                    <img src="{% static 'portfolio/classification.jpg' %}" class="img-fluid" alt="Classification Project">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Supervised</span>
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Classification</span>
+                </div>
+                <div class="card-body text-center">
                     <h5 class="card-title">Clasificación</h5>
                     <p class="card-text">Clasificación de imágenes usando redes neuronales.</p>
                     <a href="#" class="btn btn-primary">Ver más</a>
@@ -43,13 +55,33 @@
         </div>
 
         <!-- Proyecto 4 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card mb-4">
-                {% comment %} <img src="{% static 'portfolio/dimensionality_reduction.jpg' %}" class="card-img-top" alt="Dimensionality Reduction"> {% endcomment %}
-                <div class="card-body">
+                <div class="card-img-top position-relative">
+                    <img src="{% static 'portfolio/dimensionality_reduction.jpg' %}" class="img-fluid" alt="Dimensionality Reduction">
+                    <span class="badge bg-secondary position-absolute top-0 start-0 m-2">Unsupervised</span>
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Dimensionality Reduction</span>
+                </div>
+                <div class="card-body text-center">
                     <h5 class="card-title">Reducción de Dimensionalidad</h5>
                     <p class="card-text">Reducir características para mejorar modelos predictivos.</p>
                     <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto Titanic -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-img-top position-relative">
+                    <img src="{% static 'portfolio/titanic.jpg' %}" class="img-fluid" alt="Titanic Project">
+                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Supervised</span>
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Classification</span>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Titanic Analysis</h5>
+                    <p class="card-text">Análisis de supervivencia en el Titanic usando EDA y modelos de clasificación.</p>
+                    <a href="{% url 'titanic' %}" class="btn btn-primary">Ver más</a>
                 </div>
             </div>
         </div>
