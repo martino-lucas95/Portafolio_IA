@@ -25,5 +25,5 @@ def dimensionality_reduction(request):
     return render(request, 'portfolio/dimensionality_reduction.html')
 
 def titanic_project(request):
-    return render(request, 'portfolio/Titanic')
+    return render(request, 'portfolio/Titanic.html')
 

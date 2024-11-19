@@ -10,5 +10,5 @@ urlpatterns = [
     path('clustering/', views.clustering, name='clustering'),
     path('dimensionality_reduction/', views.dimensionality_reduction, name='dimensionality_reduction'),
     path('about_me/', views.about, name='about_me'),
-    path('titanic/', views.titanic_project, name='Titanic'),
+    path('titanic/', views.titanic_project, name='titanic'),
 ]
