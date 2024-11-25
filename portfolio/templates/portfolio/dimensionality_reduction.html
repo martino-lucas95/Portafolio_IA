@@ -43,14 +43,14 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">t-SNE (t-Distributed Stochastic Neighbor Embedding)</h5>
+                    <h5 class="card-title">Forward Selection</h5>
                     <p class="card-text">
-                        t-SNE es una técnica que reduce las dimensiones manteniendo la proximidad local entre los puntos de datos. Es muy utilizada en la visualización de datos en 2D o 3D.
+                        Forward Selection es un método de selección de características que comienza con un modelo vacío y agrega iterativamente las características que mejoran el rendimiento del modelo.
                     </p>
                     <h6>¿Cuándo usarlo?</h6>
-                    <p>Es ideal para visualización cuando se tiene un dataset complejo con alta dimensionalidad y se desea observar relaciones locales entre puntos.</p>
+                    <p>Es útil cuando se desea encontrar un subconjunto óptimo de características para mejorar el rendimiento del modelo, especialmente en datasets con muchas variables.</p>
                     <h6>¿Qué necesita?</h6>
-                    <p>t-SNE no requiere datos escalados, pero es computacionalmente costoso y sensible a parámetros como `perplexity`.</p>
+                    <p>Requiere un criterio para evaluar el modelo en cada paso (como el error cuadrático medio o el puntaje F1) y puede ser computacionalmente costoso si el número de características es muy alto.</p>
                 </div>
             </div>
         </div>
@@ -58,14 +58,14 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Autoencoders</h5>
+                    <h5 class="card-title">Backward Selection</h5>
                     <p class="card-text">
-                        Los autoencoders son redes neuronales diseñadas para aprender una representación comprimida de los datos. Utilizan una arquitectura de codificación-decodificación para reducir las dimensiones.
+                        Backward Selection es un método de selección de características que comienza con todas las características y elimina iterativamente aquellas que menos contribuyen al modelo.
                     </p>
                     <h6>¿Cuándo usarlo?</h6>
-                    <p>Es útil cuando se trabaja con datos complejos o no lineales y se desea capturar una representación más abstracta de los mismos. Se aplica en la compresión de imágenes, detección de anomalías, etc.</p>
+                    <p>Es útil cuando se tiene un dataset con muchas características y se busca simplificar el modelo sin comprometer significativamente su precisión.</p>
                     <h6>¿Qué necesita?</h6>
-                    <p>Requiere datos normalizados y, como es una red neuronal, una cantidad considerable de datos para su entrenamiento.</p>
+                    <p>Requiere un criterio de evaluación y puede ser más adecuado para datasets con menos características debido a su complejidad computacional.</p>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <ul>
             <li><strong>Escalado de datos:</strong> Es crucial para técnicas como PCA y LDA, que son sensibles a las magnitudes de las características.</li>
             <li><strong>Relaciones entre características:</strong> Técnicas como PCA funcionan mejor cuando las características están correlacionadas. Si no lo están, es posible que no se obtenga una gran reducción de dimensionalidad.</li>
-            <li><strong>Visualización:</strong> Para métodos como t-SNE, la reducción de dimensionalidad es principalmente para propósitos de visualización.</li>
+            <li><strong>Evaluación de modelos:</strong> Métodos como Forward y Backward Selection requieren una métrica clara para evaluar el rendimiento del modelo en cada iteración.</li>
         </ul>
     </div>
 </div>
